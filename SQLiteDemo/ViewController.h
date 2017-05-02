@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *openDB;
+@property (weak, nonatomic) IBOutlet UIButton *closeDB;
+@property (weak, nonatomic) IBOutlet UITextField *nameTxt;
 
+@property (weak, nonatomic) IBOutlet UITextField *ageTxt;
+@property (weak, nonatomic) IBOutlet UITextField *addrTxt;
+@property (weak, nonatomic) IBOutlet UITextField *selectTxt;
 
 @end
 

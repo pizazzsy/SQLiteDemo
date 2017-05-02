@@ -15,6 +15,8 @@
 		CA05CCE91EB197F200C56BD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA05CCE71EB197F200C56BD9 /* LaunchScreen.storyboard */; };
 		CA05CCF41EB197F300C56BD9 /* SQLiteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA05CCF31EB197F300C56BD9 /* SQLiteDemoTests.m */; };
 		CA05CCFF1EB197F300C56BD9 /* SQLiteDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA05CCFE1EB197F300C56BD9 /* SQLiteDemoUITests.m */; };
+		CA05CD0E1EB1A00C00C56BD9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA05CD0D1EB1A00C00C56BD9 /* libsqlite3.0.tbd */; };
+		CA05CD101EB1A16900C56BD9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA05CD0F1EB1A16900C56BD9 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		CA05CCFA1EB197F300C56BD9 /* SQLiteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLiteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA05CCFE1EB197F300C56BD9 /* SQLiteDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteDemoUITests.m; sourceTree = "<group>"; };
 		CA05CD001EB197F300C56BD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA05CD0D1EB1A00C00C56BD9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		CA05CD0F1EB1A16900C56BD9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA05CD101EB1A16900C56BD9 /* libsqlite3.dylib in Frameworks */,
+				CA05CD0E1EB1A00C00C56BD9 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				CA05CCF21EB197F300C56BD9 /* SQLiteDemoTests */,
 				CA05CCFD1EB197F300C56BD9 /* SQLiteDemoUITests */,
 				CA05CCD71EB197F200C56BD9 /* Products */,
+				CA05CD0C1EB1A00C00C56BD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +145,15 @@
 				CA05CD001EB197F300C56BD9 /* Info.plist */,
 			);
 			path = SQLiteDemoUITests;
+			sourceTree = "<group>";
+		};
+		CA05CD0C1EB1A00C00C56BD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA05CD0F1EB1A16900C56BD9 /* libsqlite3.dylib */,
+				CA05CD0D1EB1A00C00C56BD9 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SQLiteDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sy.Single.SQLiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -437,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SQLiteDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sy.Single.SQLiteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -507,6 +525,7 @@
 				CA05CD051EB197F300C56BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA05CD061EB197F300C56BD9 /* Build configuration list for PBXNativeTarget "SQLiteDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +534,7 @@
 				CA05CD081EB197F300C56BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA05CD091EB197F300C56BD9 /* Build configuration list for PBXNativeTarget "SQLiteDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +543,7 @@
 				CA05CD0B1EB197F300C56BD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
